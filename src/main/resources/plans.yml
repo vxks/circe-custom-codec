@@ -1,0 +1,22 @@
+include:
+  - abc.yml
+
+variables:
+  VAR1: ABC
+
+
+.Plan-Template-1:
+  extends:
+    .some-extension-1
+  script:
+    - sbt test 1
+    - sbt coverage 1
+  DYNAMIC_VAR_1: 4
+  DYNAMIC_VAR_2: string
+
+.Plan-Template-2:
+  extends:
+    .some-extension-2
+  script:
+    - sbt test 2
+    - sbt coverage 2
